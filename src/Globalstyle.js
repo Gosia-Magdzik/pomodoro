@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Title = styled.h1`
-    color: white;
+    color: #d7e0ff;
     font-size: 32px;
     margin-top: 42px;
     line-height: 32px;

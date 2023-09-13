@@ -1,10 +1,13 @@
 import { Title } from "./Globalstyle";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme";
 
 function App() {
   return (
-    <Title>
-      pomodoro
-    </Title>
+    <>
+      <ThemeProvider theme={theme}/>
+      <Title>pomodoro</Title>
+    </>
   );
 }
 
