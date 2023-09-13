@@ -1,12 +1,11 @@
 import { Title } from "./Globalstyle";
-import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
+import { Controls } from "./components/controls";
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}/>
       <Title>pomodoro</Title>
+      <Controls/>
     </>
   );
 }
