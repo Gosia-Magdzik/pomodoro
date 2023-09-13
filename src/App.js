@@ -1,9 +1,10 @@
+import { Title } from "./Globalstyle";
 
 function App() {
   return (
-    <div>
+    <Title>
       pomodoro
-    </div>
+    </Title>
   );
 }
 
