@@ -1,8 +1,9 @@
+import { Wrapper } from "./styled";
 
 export const Timer = () => {
     return(
-        <div>
-        testvbbbbbbbbbbbbbbbbbbbb
-        </div>
+        <Wrapper>
+            testvbbbbbbbbbbbbbbbbbbbb
+        </Wrapper>
     );
 };
