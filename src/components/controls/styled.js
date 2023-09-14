@@ -19,10 +19,6 @@ export const Control = styled.button`
     border: none;
     font-size: 15px;
     padding: 0 15px;
-    
-    &:hover {
-        background-color: ${({ theme }) => theme.color.Froly}; 
-    }
 
     ${({ activeControl }) => activeControl && css`
         background-color: ${({ theme }) => theme.color.Froly}; 

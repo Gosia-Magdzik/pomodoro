@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    width: 350px;
-    height: 350px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
-    background-color: white;
+    background-color: ${({ theme }) => theme.color.portGore};
+    display: grid;
+    place-items: center;
 `;
