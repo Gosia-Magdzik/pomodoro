@@ -1,4 +1,5 @@
 import { Wrapper, Control } from "./styled";
+import { useState } from "react";
 
 export const Controls = () => {
     return(

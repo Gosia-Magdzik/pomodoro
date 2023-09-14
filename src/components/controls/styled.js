@@ -21,6 +21,10 @@ export const Control = styled.button`
     padding: 0 15px;
     
     &:hover {
-        background-color: #f87070;
+        background-color: ${({ theme }) => theme.color.Froly}; 
+    }
+
+    &:active {
+        background-color: ${({ theme }) => theme.color.Froly}; 
     }
 `;
