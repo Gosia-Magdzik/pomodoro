@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
     display: flex;
@@ -24,7 +24,7 @@ export const Control = styled.button`
         background-color: ${({ theme }) => theme.color.Froly}; 
     }
 
-    &:active {
+    ${({ activeControl }) => activeControl && css`
         background-color: ${({ theme }) => theme.color.Froly}; 
-    }
+    `}
 `;
