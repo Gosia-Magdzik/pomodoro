@@ -7,6 +7,10 @@ export const OuterCircle = styled.div`
     background-color: ${({ theme }) => theme.color.Froly};
     display: grid;
     place-items: center;
+    background: conic-gradient(
+        ${({ theme }) => theme.color.Froly} ${({ progress }) => progress}%,
+        transparent ${({ progress }) => progress}%
+    );
 `;
 
 export const InnerCircle = styled.div`
