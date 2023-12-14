@@ -6,16 +6,18 @@ import { ClockContainer,
 
 export const Clock = () => {
 
-  const [time, setTime] = useState(60)
+  const [time, setTime] = useState(10)
 
   useEffect(() => {
+    if (time > 0) {
+      const interval = setInterval(() => {
+        setTime((time) => time -1);
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }
 
-    const interval = setInterval(() => {
-      setTime((time) => time -1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [])
+  }, [time])
 
   return (
     <ClockContainer>
