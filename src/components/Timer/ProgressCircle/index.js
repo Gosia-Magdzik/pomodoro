@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { OuterCircle, InnerCircle } from "./styled";
+import { Clock } from "./Clock";
 
 export const ProgressCircle = () => {
-    const [progress, setProgress] = useState(15);
+    const [progress, setProgress] = useState(66);
 
     return(
         <OuterCircle progress={progress}>
-            <InnerCircle/>
+            <InnerCircle>
+                <Clock/>
+            </InnerCircle>
         </OuterCircle>
     );
 };
