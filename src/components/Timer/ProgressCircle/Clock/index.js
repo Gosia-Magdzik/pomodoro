@@ -13,11 +13,14 @@ export const Clock = () => {
       const interval = setInterval(() => {
         setTime((time) => time -1);
       }, 1000);
-  
       return () => clearInterval(interval);
     }
-
   }, [time])
+
+  const getTime = (time) => {
+    const min = Math.floor(time / 60);
+    const sec = time % 60;
+  }
 
   return (
     <ClockContainer>
