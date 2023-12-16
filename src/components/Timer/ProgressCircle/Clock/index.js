@@ -27,7 +27,7 @@ export const Clock = () => {
 
   const resetTime = () => {
     setTime(initTime);
-    isActive(false);
+    //setIsActive(false);
   };
 
   const getTime = (time) => {
