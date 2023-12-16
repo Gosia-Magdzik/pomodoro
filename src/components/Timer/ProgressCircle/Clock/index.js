@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { ClockContainer,
         TimerText,
         StartPauseButton
 } from './styled'
+import { StateContext } from '../../../StateProvider';
 
 export const Clock = () => {
 
-  const [time, setTime] = useState(777);
-  const [isActive, setIsActive] = useState(false);
+  const {time, setTime, isActive, setIsActive} = useContext(StateContext);
 
   useEffect(() => {
     if (isActive && time > 0) {
@@ -34,6 +34,9 @@ export const Clock = () => {
         <StartPauseButton onClick={toggleClock}>
           {isActive ? "PAUSE" : "START"}
         </StartPauseButton>
+        <ResetButton>
+          
+        </ResetButton>
     </ClockContainer>
   )
 }

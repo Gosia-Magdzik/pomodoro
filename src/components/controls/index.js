@@ -1,8 +1,9 @@
 import { Wrapper, Control } from "./styled";
-import { useState } from "react";
+import { useContext } from "react";
+import { StateContext } from "../StateProvider";
 
 export const Controls = () => {
-    const [activeControl, setActiveControl] = useState(0);
+    const {activeControl, setActiveControl} = useContext(StateContext);
 
     const handleClick = (index) => {
         setActiveControl(index)
