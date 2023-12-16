@@ -1,10 +1,14 @@
 import { OuterCircle, InnerCircle } from "./styled";
 import { Clock } from "./Clock";
 import { StateContext } from "../../StateProvider";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export const ProgressCircle = () => {
-    const {progress, setProgress} = useContext(StateContext);
+    const {progress, setProgress, time, initTime} = useContext(StateContext);
+
+    useEffect(() => {
+        setProgress(time / (initTime / 100));
+    }, [setProgress])
 
     return(
         <OuterCircle progress={progress}>
