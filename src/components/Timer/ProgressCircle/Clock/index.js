@@ -6,16 +6,21 @@ import { ClockContainer,
 
 export const Clock = () => {
 
-  const [time, setTime] = useState(777)
+  const [time, setTime] = useState(777);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    if (time > 0) {
+    if (isActive && time > 0) {
       const interval = setInterval(() => {
         setTime((time) => time -1);
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [time])
+  }, [time, isActive]);
+
+  const toggleClock = () => {
+    setIsActive(!isActive);
+  };
 
   const getTime = (time) => {
     const min = Math.floor(time / 60);
@@ -26,7 +31,9 @@ export const Clock = () => {
   return (
     <ClockContainer>
         <TimerText>{getTime(time)}</TimerText>
-        <StartPauseButton>PAUSE</StartPauseButton>
+        <StartPauseButton onClick={toggleClock}>
+          {isActive ? "PAUSE" : "START"}
+        </StartPauseButton>
     </ClockContainer>
   )
 }
