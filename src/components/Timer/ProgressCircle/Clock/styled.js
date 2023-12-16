@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const ClockContainer = styled.div`
-    display: grid;
-    place-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
 `
 
 export const TimerText = styled.h3`
@@ -18,4 +18,11 @@ export const StartPauseButton = styled.button`
     color: ${({ theme }) => theme.color.Periwinkle};
     font-size: 3rem;
     letter-spacing: 1rem;
+`
+
+export const ResetButton = styled(StartPauseButton)``
+
+export const Img = styled.img`
+    width: 4rem;
+    margin: 1rem;
 `

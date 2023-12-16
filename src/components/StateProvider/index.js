@@ -5,7 +5,7 @@ export const StateContext = createContext();
 export const StateProvider = ({ children }) => {
 
     const [pomodoro, setPomodoro] = useState(21 * 60);
-    const [shortBreak, setShortBreak] = useState(7 * 60);
+    const [shortBreak, setShortBreak] = useState(7 * 60); 
     const [longBreak, setLongBreak] = useState(33 * 60);
 
     const [initTime, setInitTime] = useState(0);
@@ -48,6 +48,14 @@ export const StateProvider = ({ children }) => {
             setTime,
             isActive,
             setIsActive, 
+            initTime,
+            setInitTime,
+            pomodoro,
+            setPomodoro,
+            shortBreak,
+            setShortBreak,
+            longBreak,
+            setLongBreak,
         }}
     >
         {children}

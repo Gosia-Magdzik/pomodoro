@@ -1,13 +1,16 @@
 import React, { useEffect, useContext } from 'react'
 import { ClockContainer,
         TimerText,
-        StartPauseButton
+        StartPauseButton,
+        ResetButton,
+        Img,
 } from './styled'
 import { StateContext } from '../../../StateProvider';
+import refresh from './refresh.svg'
 
 export const Clock = () => {
 
-  const {time, setTime, isActive, setIsActive} = useContext(StateContext);
+  const {time, setTime, isActive, setIsActive, initTime} = useContext(StateContext);
 
   useEffect(() => {
     if (isActive && time > 0) {
@@ -22,6 +25,11 @@ export const Clock = () => {
     setIsActive(!isActive);
   };
 
+  const resetTime = () => {
+    setTime(initTime);
+    isActive(false);
+  };
+
   const getTime = (time) => {
     const min = Math.floor(time / 60);
     const sec = time % 60;
@@ -30,12 +38,12 @@ export const Clock = () => {
 
   return (
     <ClockContainer>
-        <TimerText>{getTime(time)}</TimerText>
-        <StartPauseButton onClick={toggleClock}>
+        <TimerText> { getTime(time) } </TimerText>
+        <StartPauseButton onClick= { toggleClock }>
           {isActive ? "PAUSE" : "START"}
         </StartPauseButton>
-        <ResetButton>
-          
+        <ResetButton onClick= { resetTime }>
+          {time === 0 && <Img src= { refresh }/> }
         </ResetButton>
     </ClockContainer>
   )
