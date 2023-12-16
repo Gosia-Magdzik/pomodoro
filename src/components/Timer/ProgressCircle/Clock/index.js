@@ -6,7 +6,7 @@ import { ClockContainer,
 
 export const Clock = () => {
 
-  const [time, setTime] = useState(10)
+  const [time, setTime] = useState(777)
 
   useEffect(() => {
     if (time > 0) {
@@ -20,11 +20,12 @@ export const Clock = () => {
   const getTime = (time) => {
     const min = Math.floor(time / 60);
     const sec = time % 60;
+    return `${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec}`;
   }
 
   return (
     <ClockContainer>
-        <TimerText>{time}</TimerText>
+        <TimerText>{getTime(time)}</TimerText>
         <StartPauseButton>PAUSE</StartPauseButton>
     </ClockContainer>
   )
