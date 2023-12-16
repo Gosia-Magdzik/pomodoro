@@ -43,7 +43,7 @@ export const Clock = () => {
           {isActive ? "PAUSE" : "START"}
         </StartPauseButton>
         <ResetButton onClick= { resetTime }>
-          {time === 0 && <Img src= { refresh }/> }
+         <Img src= { refresh }/> 
         </ResetButton>
     </ClockContainer>
   )

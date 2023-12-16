@@ -18,11 +18,12 @@ export const StartPauseButton = styled.button`
     color: ${({ theme }) => theme.color.Periwinkle};
     font-size: 3rem;
     letter-spacing: 1rem;
+
 `
 
 export const ResetButton = styled(StartPauseButton)``
 
 export const Img = styled.img`
-    width: 4rem;
-    margin: 1rem;
+    width: 3rem;
+    margin-top: 1rem;
 `

@@ -19,4 +19,5 @@ export const InnerCircle = styled.div`
     background-color: ${(props) => props.theme.color.portGore};
     display: grid;
     place-items: center;
+    padding-top: 5rem;
 `;
