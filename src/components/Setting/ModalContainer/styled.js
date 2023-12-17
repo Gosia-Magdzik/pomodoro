@@ -8,6 +8,7 @@ export const Container = styled.div`
     justify-content: center;
     height: 100vh;
     //width: 100vh;
+    z-index: 150;
 `
 
 export const ModalContent = styled.div`
