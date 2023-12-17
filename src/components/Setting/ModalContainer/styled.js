@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion"
 
 export const Container = styled.div`
     position: absolute;
@@ -11,7 +12,7 @@ export const Container = styled.div`
     z-index: 150;
 `
 
-export const ModalContent = styled.div`
+export const ModalContent = styled(motion.div)`
     width: 36rem;
     height: 25rem;
     background-color: teal;
