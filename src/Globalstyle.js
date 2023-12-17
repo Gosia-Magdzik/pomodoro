@@ -39,3 +39,7 @@ export const Wrapper = styled.div`
   justify-content: center;
 `;
 
+export const CogIcon = styled.div`
+  font-size: 3rem;
+`
+
