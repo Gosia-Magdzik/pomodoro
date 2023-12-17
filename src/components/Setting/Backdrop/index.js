@@ -4,7 +4,7 @@ import { KBackdrop } from './styled';
 export const Backdrop = () => {
   return (
     <KBackdrop>
-      index
+      
     </KBackdrop>
   )
 }

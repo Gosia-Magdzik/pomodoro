@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Backdrop } from '../Backdrop';
+import { ModalContainer } from '../ModalContainer';
 
 export const Modal = () => {
   return (
-    <div>Modal</div>
+    <>
+      <Backdrop />
+      <ModalContainer />
+    </>
   )
 }
 
