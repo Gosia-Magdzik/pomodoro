@@ -2,11 +2,16 @@ import React from 'react';
 import { Backdrop } from '../Backdrop';
 import { ModalContainer } from '../ModalContainer';
 
-export const Modal = () => {
+export const Modal = ({isOpen, onClose}) => {
   return (
     <>
-      <Backdrop />
-      <ModalContainer />
+      { isOpen && (
+        <>
+        <Backdrop />
+        <ModalContainer isOpen={isOpen} onClose={onClose} />
+        </>
+      )
+      }
     </>
   )
 }

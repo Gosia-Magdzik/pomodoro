@@ -8,13 +8,13 @@ import {
   ModalCloseButton,
 } from './styled'
 
-export const ModalContainer = () => {
+export const ModalContainer = ({ onClose }) => {
   return (
     <Container>
       <ModalContent>
         <ModalHeader>
           <ModalTitle>Modal Title</ModalTitle>
-          <ModalCloseButton></ModalCloseButton>
+          <ModalCloseButton onClick={onClose}>ZAMKNIJ</ModalCloseButton>
         </ModalHeader>
         <ModalBody></ModalBody>
       </ModalContent>
