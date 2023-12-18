@@ -6,7 +6,9 @@ import {
   ModalBody,
   ModalTitle,
   ModalCloseButton,
+  Hr
 } from './styled';
+import { FaWindowClose } from 'react-icons/fa'
 
 export const ModalContainer = ({ onClose }) => {
   return (
@@ -18,9 +20,12 @@ export const ModalContainer = ({ onClose }) => {
         transition={{ duration: 0.4 }}
       >
         <ModalHeader>
-          <ModalTitle>Modal Title</ModalTitle>
-          <ModalCloseButton onClick={onClose}>ZAMKNIJ</ModalCloseButton>
+          <ModalTitle>Settings</ModalTitle>
+          <ModalCloseButton onClick={onClose}>
+            <FaWindowClose/>
+          </ModalCloseButton>
         </ModalHeader>
+        <Hr/>
         <ModalBody></ModalBody>
       </ModalContent>
     </Container>

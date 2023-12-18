@@ -20,7 +20,9 @@ export const ModalContent = styled(motion.div)`
 `
 
 export const ModalHeader = styled.div`
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 export const ModalBody = styled.div`
@@ -28,9 +30,17 @@ export const ModalBody = styled.div`
 `
 
 export const ModalTitle = styled.h1`
-
+    margin-left: 2rem;
 `
 
 export const ModalCloseButton = styled.button`
+    justify-self: end;
+    all: unset;
+    margin: 1rem;
+    font-size: 3rem;
+`
+
+export const Hr = styled.hr`
+    border: 1px solid ${({ theme }) => theme.color.Periwinkle};
 
 `
