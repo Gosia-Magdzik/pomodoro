@@ -8,15 +8,19 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    //width: 100vh;
     z-index: 150;
 `
 
 export const ModalContent = styled(motion.div)`
     width: 36rem;
     height: 25rem;
-    background-color: teal;
+    background-color: ${({ theme }) => theme.color.portGore};;
     border-radius: 25px;
+
+    @media (max-width: 550px) {
+        width: 90%;
+        padding: 1rem;
+    }
 `
 
 export const ModalHeader = styled.div`
@@ -48,11 +52,22 @@ export const Hr = styled.hr`
 export const InputWrapper = styled.div`
     display: flex;
     padding: 1rem;
-    margin: 1rem;
+    gap: 2rem;
 `
 
 export const FormControl = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    label {
+        font-size: 1.5rem;
+    }
+    input {
+        width: 100%;
+        font-size: 2rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        border: 1px solid black;
+        background-color: #ead8fc;
+    }
 `
