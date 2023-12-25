@@ -6,9 +6,12 @@ import {
   ModalBody,
   ModalTitle,
   ModalCloseButton,
-  Hr
+  Hr,
+  InputWrapper,
+  FormControl
 } from './styled';
-import { FaWindowClose } from 'react-icons/fa'
+import { FaWindowClose } from 'react-icons/fa';
+import { Formik, Form, Field } from 'formik';
 
 export const ModalContainer = ({ onClose }) => {
   return (
@@ -26,7 +29,29 @@ export const ModalContainer = ({ onClose }) => {
           </ModalCloseButton>
         </ModalHeader>
         <Hr/>
-        <ModalBody></ModalBody>
+        <ModalBody>
+          <Formik 
+            initialValues= {{ pomodoro: "", short: "", long: "" }}
+            onSubmit= {() =>  {}}
+          >
+            <Form>
+              <InputWrapper>
+                <FormControl>
+                  <label htmlFor="pomodoro">Pomodoro</label>
+                  <Field name="pomodoro" min="1" max="60" />
+                </FormControl>
+                <FormControl>
+                  <label htmlFor="short">Short Break</label>
+                  <Field name="short" min="1" max="60" />
+                </FormControl>
+                <FormControl>
+                  <label htmlFor="long">Long Break</label>
+                  <Field name="long" min="1" max="60" />
+                </FormControl>
+              </InputWrapper>
+            </Form>
+          </Formik> 
+        </ModalBody>
       </ModalContent>
     </Container>
   )

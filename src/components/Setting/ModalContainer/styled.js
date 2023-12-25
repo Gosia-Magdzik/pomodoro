@@ -44,3 +44,15 @@ export const Hr = styled.hr`
     border: 1px solid ${({ theme }) => theme.color.Periwinkle};
 
 `
+
+export const InputWrapper = styled.div`
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+`
+
+export const FormControl = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`
