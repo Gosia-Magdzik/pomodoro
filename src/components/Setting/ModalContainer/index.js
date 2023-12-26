@@ -8,7 +8,8 @@ import {
   ModalCloseButton,
   Hr,
   InputWrapper,
-  FormControl
+  FormControl,
+  ApplyButton,
 } from './styled';
 import { FaWindowClose } from 'react-icons/fa';
 import { Formik, Form, Field } from 'formik';
@@ -49,6 +50,9 @@ export const ModalContainer = ({ onClose }) => {
                   <Field name="long" min="1" max="60" />
                 </FormControl>
               </InputWrapper>
+              <ApplyButton type="submit">
+                Apply
+              </ApplyButton>
             </Form>
           </Formik> 
         </ModalBody>

@@ -70,4 +70,13 @@ export const FormControl = styled.div`
         border: 1px solid black;
         background-color: #ead8fc;
     }
+`;
+
+export const ApplyButton = styled.button`
+    border-radius: 1rem;
+    padding: 1rem 4rem;
+    font-size: 2rem;
+    background: ${({ theme }) => theme.color.Froly};
+    color: ${({ theme }) => theme.color.Periwinkle};
+    margin-top: 2rem;
 `
